@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("drive_check")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6c9207409662fdd722944d92ec9132211edbd2bc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+05da767bd67bed20da01219306f5c583ac821b78")]
 [assembly: System.Reflection.AssemblyProductAttribute("drive_check")]
 [assembly: System.Reflection.AssemblyTitleAttribute("drive_check")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
