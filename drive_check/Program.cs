@@ -1,14 +1,6 @@
 ﻿using Google.Apis.Auth.OAuth2;
-using Google.Apis.Auth.OAuth2.Flows;
 using Google.Apis.Drive.v3;
-using Google.Apis.Drive.v3.Data;
 using Google.Apis.Services;
-using Google.Apis.Util.Store;
-using System;
-using System.ComponentModel;
-using System.IO;
-using System.Threading;
-using System.Threading.Tasks;
 using File = Google.Apis.Drive.v3.Data.File;
 
 //https://medium.com/@meghnav274/uploading-files-to-google-drive-using-net-console-app-f0aae69a3f0f
@@ -44,8 +36,7 @@ class Program
             };
 
 
-            string query = $"'{folderId}' in parents and createdTime >= '{specifiedDate}T00:00:00' and createdTime < '{specifiedDate}T23:59:59'"; //
-            var request = service.Files.List();
+            string query = $"'{folderId}' in parents and mimeType != 'application/vnd.google-apps.folder' and createdTime >= '{specifiedDate}T00:00:00' and createdTime < '{specifiedDate}T23:59:59'"; var request = service.Files.List();
             request.Q = query;
             request.Fields = "files(id, name, createdTime)";
 
